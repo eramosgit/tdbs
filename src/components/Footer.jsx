@@ -5,10 +5,12 @@ import {
   Stack,
   Link,
   Container,
+  useMediaQuery,
 } from "@mui/material";
 import { Facebook, LinkedIn } from "@mui/icons-material";
 import { COMPANY_NAME } from "../constants";
 import SvgIcon from "@mui/material/SvgIcon";
+import { useTheme } from "@mui/material/styles";
 import { useNavigate } from "react-router-dom";
 
 const XIcon = (props) => (
@@ -19,25 +21,34 @@ const XIcon = (props) => (
 
 const Footer = () => {
   const navigate = useNavigate();
+  const theme = useTheme();
+  const isMobile = useMediaQuery(theme.breakpoints.down("sm")); // Check if screen is small
 
   return (
     <Box
       sx={{
         backgroundColor: "rgb(242,242,242)",
         color: "rgb(97, 97, 97)",
-        padding: "10px 0", // Removed left/right padding for Container usage
+        padding: "10px 0",
       }}
     >
       <Container maxWidth="lg">
         <Box
           sx={{
             display: "flex",
+            flexDirection: isMobile ? "column" : "row", // Stack on mobile
             justifyContent: "space-between",
             alignItems: "center",
+            textAlign: isMobile ? "center" : "left",
+            gap: isMobile ? 1 : 0, // Add spacing in mobile view
           }}
         >
           {/* Left: Copyright & Links */}
-          <Stack direction="row" spacing={2} alignItems="center">
+          <Stack
+            direction={isMobile ? "column" : "row"} // Stack vertically on mobile
+            spacing={2}
+            alignItems={isMobile ? "center" : "center"}
+          >
             <Typography variant="caption">
               © {new Date().getFullYear()} {COMPANY_NAME}. All rights reserved.
             </Typography>
@@ -64,7 +75,7 @@ const Footer = () => {
           </Stack>
 
           {/* Right: Social Media Icons */}
-          <Stack direction="row" spacing={1}>
+          <Stack direction="row" spacing={1} justifyContent={isMobile ? "center" : "flex-end"}>
             <IconButton
               href="https://facebook.com/YOUR_PAGE"
               target="_blank"
