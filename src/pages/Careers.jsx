@@ -23,7 +23,7 @@ const Careers = () => {
   useEffect(() => {
     const fetchCSV = async () => {
       try {
-        const response = await fetch("/job_positions.csv");
+        const response = await fetch(`${import.meta.env.BASE_URL}job_positions.csv`);
         if (!response.ok) throw new Error("Failed to load job positions.");
         const csvText = await response.text();
 
