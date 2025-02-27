@@ -7,7 +7,7 @@ import {
   List,
   ListItem,
   ListItemText,
-  Container, // Added Container for consistent width
+  Container,
 } from "@mui/material";
 import MenuIcon from "@mui/icons-material/Menu";
 import { Link, useLocation } from "react-router-dom";
@@ -39,7 +39,7 @@ const Header = () => {
           padding: "0",
         }}
       >
-        <Container maxWidth="lg"> {/* Ensure consistency with body */}
+        <Container maxWidth="lg">
           <Toolbar
             disableGutters
             sx={{
@@ -53,14 +53,11 @@ const Header = () => {
               <img
                 src={ThriveLogo}
                 alt="Thrive Dynamic Solutions"
-                style={{
-                  height: "50px",
-                  width: "auto",
-                }}
+                style={{ height: "50px", width: "auto" }}
               />
             </Link>
 
-            {/* Navigation Links */}
+            {/* Desktop Navigation */}
             <List
               sx={{
                 display: { xs: "none", md: "flex" },
@@ -113,18 +110,25 @@ const Header = () => {
         <List sx={{ width: 250 }}>
           {navItems.map((item) => (
             <ListItem
-              button
               key={item.label}
               component={Link}
               to={item.path}
               onClick={handleDrawerToggle}
               sx={{
                 fontWeight: location.pathname === item.path ? "bold" : "normal",
+                "&:hover": {
+                  textDecoration: "underline",
+                  textUnderlineOffset: "5px",
+                  textDecorationThickness: "2px",
+                },
               }}
             >
               <ListItemText
                 primary={item.label}
-                sx={{ whiteSpace: "nowrap", color: "rgb(38,38,38)" }}
+                primaryTypographyProps={{
+                  fontWeight: location.pathname === item.path ? "bold" : "normal",
+                  color: "rgb(38,38,38)",
+                }}
               />
             </ListItem>
           ))}
