@@ -8,19 +8,19 @@ import {
   CardMedia,
 } from "@mui/material";
 import HeroSection from "../components/HeroSection"; // Import HeroSection
-import mission from "../assets/mission.jpg";
-import story from "../assets/story.jpg";
-import clientCentric from "../assets/client-centric.jpg";
-import innovation from "../assets/innovation.jpg";
-import integrity from "../assets/integrity.jpg";
-import collaboration from "../assets/collaboration.jpg";
-import offshoreStrategy from "../assets/offshore-strategy.jpg";
-import softwareDev from "../assets/software-development.jpg";
-import automation from "../assets/automation.jpg";
-import analytics from "../assets/analytics.jpg";
-import consulting from "../assets/consulting.jpg";
-import fullCycleIT from "../assets/full-cycle-it.jpg";
-import empoweringBusinessImage from "../assets/empowering-business.jpg";
+import mission from "../assets/mission.webp";
+import story from "../assets/story.webp";
+import clientCentric from "../assets/client-centric.webp";
+import innovation from "../assets/innovation.webp";
+import integrity from "../assets/integrity.webp";
+import collaboration from "../assets/collaboration.webp";
+import offshoreStrategy from "../assets/offshore-strategy.webp";
+import softwareDev from "../assets/software-development.webp";
+import automation from "../assets/automation.webp";
+import analytics from "../assets/analytics.webp";
+import consulting from "../assets/consulting.webp";
+import fullCycleIT from "../assets/full-cycle-it.webp";
+import empoweringBusinessImage from "../assets/empowering-business.webp";
 import { COMPANY_NAME } from "../constants"; // Import company name
 import { Helmet } from "react-helmet-async";
 

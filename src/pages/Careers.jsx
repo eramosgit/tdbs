@@ -9,7 +9,7 @@ import {
   Button,
 } from "@mui/material";
 import HeroSection from "../components/HeroSection";
-import careersImage from "../assets/careers.jpg";
+import careersImage from "../assets/careers.webp";
 import WorkIcon from "@mui/icons-material/Work";
 import ListAltIcon from "@mui/icons-material/ListAlt";
 import BuildIcon from "@mui/icons-material/Build";

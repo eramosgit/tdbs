@@ -11,7 +11,7 @@ import {
 } from "@mui/material";
 import MenuIcon from "@mui/icons-material/Menu";
 import { Link, useLocation } from "react-router-dom";
-import ThriveLogo from "../assets/thrive-dynamic-solutions-icon.jpg";
+import ThriveLogo from "../assets/thrive-dynamic-solutions-icon.webp";
 
 const Header = () => {
   const [mobileOpen, setMobileOpen] = useState(false);

@@ -1,12 +1,12 @@
 import HeroSection from "../components/HeroSection";
 import { Container, Grid, Card, CardContent, Typography, CardMedia, } from "@mui/material";
-import servicesImage from "../assets/services.jpg";
-import offshoreStrategy from "../assets/offshore-strategy.jpg";
-import softwareDev from "../assets/software-development.jpg";
-import automation from "../assets/automation.jpg";
-import analytics from "../assets/analytics.jpg";
-import consulting from "../assets/consulting.jpg";
-import fullCycleIT from "../assets/full-cycle-it.jpg";
+import servicesImage from "../assets/services.webp";
+import offshoreStrategy from "../assets/offshore-strategy.webp";
+import softwareDev from "../assets/software-development.webp";
+import automation from "../assets/automation.webp";
+import analytics from "../assets/analytics.webp";
+import consulting from "../assets/consulting.webp";
+import fullCycleIT from "../assets/full-cycle-it.webp";
 import { Helmet } from "react-helmet-async";
 import { COMPANY_NAME } from "../constants"; // Import company name
 
