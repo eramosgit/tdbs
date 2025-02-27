@@ -1,4 +1,7 @@
-import { useEffect, useState } from "react";
+import BuildIcon from "@mui/icons-material/Build";
+import ListAltIcon from "@mui/icons-material/ListAlt";
+import LocationOnIcon from "@mui/icons-material/LocationOn";
+import WorkIcon from "@mui/icons-material/Work";
 import {
   Box,
   Container,
@@ -8,14 +11,12 @@ import {
   CardContent,
   Button,
 } from "@mui/material";
-import LocationOnIcon from "@mui/icons-material/LocationOn";
-import HeroSection from "../components/HeroSection";
-import careersImage from "../assets/careers.webp";
-import WorkIcon from "@mui/icons-material/Work";
-import ListAltIcon from "@mui/icons-material/ListAlt";
-import BuildIcon from "@mui/icons-material/Build";
 import Papa from "papaparse";
+import { useEffect, useState } from "react";
 import { Helmet } from "react-helmet-async";
+
+import careersImage from "../assets/careers.webp";
+import HeroSection from "../components/HeroSection";
 import { COMPANY_NAME, COMPANY_EMAIL } from "../constants";
 
 const Careers = () => {

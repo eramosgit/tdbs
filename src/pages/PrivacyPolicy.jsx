@@ -1,5 +1,6 @@
 import { Container, Typography, Box, Link } from "@mui/material";
 import { Helmet } from "react-helmet-async";
+
 import { COMPANY_NAME } from "../constants"; // Import company name
 
 const PrivacyPolicy = () => {

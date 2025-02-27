@@ -1,13 +1,14 @@
+import { HelmetProvider } from "react-helmet-async";
 import { HashRouter as Router, Routes, Route } from "react-router-dom";
-import Header from "./components/Header";
+
 import Footer from "./components/Footer";
-import Home from "./pages/Home";
-import Careers from "./pages/Careers";
+import Header from "./components/Header";
 import About from "./pages/About";
+import Careers from "./pages/Careers";
 import Contact from "./pages/Contact";
+import Home from "./pages/Home";
 import PrivacyPolicy from "./pages/PrivacyPolicy";
 import TermsOfUse from "./pages/TermsOfUse";
-import { HelmetProvider } from "react-helmet-async";
 
 const App = () => {
   return (

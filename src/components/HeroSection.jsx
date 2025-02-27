@@ -8,7 +8,7 @@ const HeroSection = ({
   backgroundPosition = "center",
 }) => {
   const hasContent = title?.trim() || subtitle?.trim();
-  
+
   return (
     <Box
       sx={{

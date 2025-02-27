@@ -1,5 +1,6 @@
 import { Container, Typography, Box, Link } from "@mui/material";
 import { Helmet } from "react-helmet-async";
+
 import { COMPANY_NAME } from "../constants"; // Import company name
 
 const TermsOfUse = () => {
@@ -65,16 +66,25 @@ const TermsOfUse = () => {
           </Typography>
           <Typography variant="body1" paragraph>
             {COMPANY_NAME} uses images sourced from Unsplash (
-            <Link href="https://unsplash.com" target="_blank" rel="noopener noreferrer">
+            <Link
+              href="https://unsplash.com"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               unsplash.com
             </Link>
-            ), which are licensed under the Unsplash License. These images are free to use for commercial and non-commercial purposes without requiring permission.
+            ), which are licensed under the Unsplash License. These images are
+            free to use for commercial and non-commercial purposes without
+            requiring permission.
           </Typography>
           <Typography variant="body1" paragraph>
-            While most Unsplash images do not require attribution, some photographers may request credit as per Unsplash guidelines. Where applicable, we strive to provide proper attribution.
+            While most Unsplash images do not require attribution, some
+            photographers may request credit as per Unsplash guidelines. Where
+            applicable, we strive to provide proper attribution.
           </Typography>
           <Typography variant="body1" paragraph>
-            If you believe an image has been used improperly or wish to report an issue, please contact us.
+            If you believe an image has been used improperly or wish to report
+            an issue, please contact us.
           </Typography>
         </Box>
 
@@ -83,8 +93,9 @@ const TermsOfUse = () => {
             Disclaimers and Limitation of Liability
           </Typography>
           <Typography variant="body1" paragraph>
-            This website is provided &quot;as is&quot; without any warranties. We do not
-            guarantee the accuracy, reliability, or availability of the content.
+            This website is provided &quot;as is&quot; without any warranties.
+            We do not guarantee the accuracy, reliability, or availability of
+            the content.
           </Typography>
           <Typography variant="body1" paragraph>
             {COMPANY_NAME} shall not be liable for any damages arising from your

@@ -1,4 +1,4 @@
-import { useState } from "react";
+import MenuIcon from "@mui/icons-material/Menu";
 import {
   AppBar,
   Toolbar,
@@ -9,8 +9,9 @@ import {
   ListItemText,
   Container,
 } from "@mui/material";
-import MenuIcon from "@mui/icons-material/Menu";
+import { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
+
 import ThriveLogo from "../assets/thrive-dynamic-solutions-icon.webp";
 
 const Header = () => {
@@ -126,7 +127,8 @@ const Header = () => {
               <ListItemText
                 primary={item.label}
                 primaryTypographyProps={{
-                  fontWeight: location.pathname === item.path ? "bold" : "normal",
+                  fontWeight:
+                    location.pathname === item.path ? "bold" : "normal",
                   color: "rgb(38,38,38)",
                 }}
               />

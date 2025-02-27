@@ -7,22 +7,23 @@ import {
   CardContent,
   CardMedia,
 } from "@mui/material";
-import HeroSection from "../components/HeroSection"; // Import HeroSection
-import mission from "../assets/mission.webp";
-import story from "../assets/story.webp";
+import { Helmet } from "react-helmet-async";
+
+import analytics from "../assets/analytics.webp";
+import automation from "../assets/automation.webp";
 import clientCentric from "../assets/client-centric.webp";
+import collaboration from "../assets/collaboration.webp";
+import consulting from "../assets/consulting.webp";
+import empoweringBusinessImage from "../assets/empowering-business.webp";
+import fullCycleIT from "../assets/full-cycle-it.webp";
 import innovation from "../assets/innovation.webp";
 import integrity from "../assets/integrity.webp";
-import collaboration from "../assets/collaboration.webp";
+import mission from "../assets/mission.webp";
 import offshoreStrategy from "../assets/offshore-strategy.webp";
 import softwareDev from "../assets/software-development.webp";
-import automation from "../assets/automation.webp";
-import analytics from "../assets/analytics.webp";
-import consulting from "../assets/consulting.webp";
-import fullCycleIT from "../assets/full-cycle-it.webp";
-import empoweringBusinessImage from "../assets/empowering-business.webp";
+import story from "../assets/story.webp";
+import HeroSection from "../components/HeroSection"; // Import HeroSection
 import { COMPANY_NAME } from "../constants"; // Import company name
-import { Helmet } from "react-helmet-async";
 
 const coreValues = [
   {

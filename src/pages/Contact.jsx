@@ -1,10 +1,11 @@
-import HeroSection from "../components/HeroSection";
-import officeBuildingImage from "../assets/office-building.webp";
-import officeBuildingMapImage from "../assets/office-building-map.webp";
-import { Box, Typography, Container, Link, Grid } from "@mui/material";
 import { LocationOn, Phone, Email } from "@mui/icons-material";
-import { COMPANY_NAME, COMPANY_PHONE, COMPANY_EMAIL } from "../constants";
+import { Box, Typography, Container, Link, Grid } from "@mui/material";
 import { Helmet } from "react-helmet-async";
+
+import officeBuildingMapImage from "../assets/office-building-map.webp";
+import officeBuildingImage from "../assets/office-building.webp";
+import HeroSection from "../components/HeroSection";
+import { COMPANY_NAME, COMPANY_PHONE, COMPANY_EMAIL } from "../constants";
 
 const Contact = () => {
   return (

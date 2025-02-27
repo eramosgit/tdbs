@@ -1,3 +1,4 @@
+import { Facebook, LinkedIn } from "@mui/icons-material";
 import {
   Box,
   Typography,
@@ -7,11 +8,11 @@ import {
   Container,
   useMediaQuery,
 } from "@mui/material";
-import { Facebook, LinkedIn } from "@mui/icons-material";
-import { COMPANY_NAME } from "../constants";
-import SvgIcon from "@mui/material/SvgIcon";
 import { useTheme } from "@mui/material/styles";
+import SvgIcon from "@mui/material/SvgIcon";
 import { useNavigate } from "react-router-dom";
+
+import { COMPANY_NAME } from "../constants";
 
 const XIcon = (props) => (
   <SvgIcon {...props} viewBox="0 0 24 24">
@@ -75,7 +76,11 @@ const Footer = () => {
           </Stack>
 
           {/* Right: Social Media Icons */}
-          <Stack direction="row" spacing={1} justifyContent={isMobile ? "center" : "flex-end"}>
+          <Stack
+            direction="row"
+            spacing={1}
+            justifyContent={isMobile ? "center" : "flex-end"}
+          >
             <IconButton
               href="https://facebook.com/YOUR_PAGE"
               target="_blank"
