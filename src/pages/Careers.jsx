@@ -23,7 +23,9 @@ const Careers = () => {
   useEffect(() => {
     const fetchCSV = async () => {
       try {
-        const response = await fetch(`${import.meta.env.BASE_URL}job_positions.csv`);
+        const response = await fetch(
+          `${import.meta.env.BASE_URL}job_positions.csv`
+        );
         if (!response.ok) throw new Error("Failed to load job positions.");
         const csvText = await response.text();
 
@@ -43,13 +45,13 @@ const Careers = () => {
 
   return (
     <>
-<Helmet>
-  <title>Careers - {COMPANY_NAME}</title>
-  <meta
-    name="description"
-    content={`Explore exciting career opportunities at ${COMPANY_NAME}. Join our team and grow your career in a dynamic and innovative environment.`}
-  />
-</Helmet>
+      <Helmet>
+        <title>Careers - {COMPANY_NAME}</title>
+        <meta
+          name="description"
+          content={`Explore exciting career opportunities at ${COMPANY_NAME}. Join our team and grow your career in a dynamic and innovative environment.`}
+        />
+      </Helmet>
 
       <HeroSection
         backgroundImage={careersImage}
@@ -75,7 +77,7 @@ const Careers = () => {
                   display: "flex",
                   flexDirection: "column",
                   flexGrow: 1,
-                  height: "400px",
+                  height: "450px",
                 }}
               >
                 <CardContent sx={{ flexGrow: 1, overflowY: "auto" }}>
@@ -105,7 +107,7 @@ const Careers = () => {
                     </>
                   )}
 
-{job.Roles && job.Roles.trim() && (
+                  {job.Roles && job.Roles.trim() && (
                     <>
                       <Typography
                         variant="subtitle1"
@@ -167,7 +169,9 @@ const Careers = () => {
                     variant="contained"
                     color="primary"
                     // sx={{ width: "100%" }}
-                    href={`mailto:${COMPANY_EMAIL}?subject=Job Application for ${encodeURIComponent(job.Title)}`}
+                    href={`mailto:${COMPANY_EMAIL}?subject=Job Application for ${encodeURIComponent(
+                      job.Title
+                    )}`}
                   >
                     Apply Now
                   </Button>

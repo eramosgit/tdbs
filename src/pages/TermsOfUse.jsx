@@ -1,4 +1,4 @@
-import { Container, Typography, Box } from "@mui/material";
+import { Container, Typography, Box, Link } from "@mui/material";
 import { Helmet } from "react-helmet-async";
 import { COMPANY_NAME } from "../constants"; // Import company name
 
@@ -56,6 +56,25 @@ const TermsOfUse = () => {
             All content on this website, including text, graphics, logos, and
             software, is the property of {COMPANY_NAME} or its licensors and is
             protected by copyright and trademark laws.
+          </Typography>
+        </Box>
+
+        <Box mt={4}>
+          <Typography variant="h5" gutterBottom>
+            Image Usage and Attribution
+          </Typography>
+          <Typography variant="body1" paragraph>
+            {COMPANY_NAME} uses images sourced from Unsplash (
+            <Link href="https://unsplash.com" target="_blank" rel="noopener noreferrer">
+              unsplash.com
+            </Link>
+            ), which are licensed under the Unsplash License. These images are free to use for commercial and non-commercial purposes without requiring permission.
+          </Typography>
+          <Typography variant="body1" paragraph>
+            While most Unsplash images do not require attribution, some photographers may request credit as per Unsplash guidelines. Where applicable, we strive to provide proper attribution.
+          </Typography>
+          <Typography variant="body1" paragraph>
+            If you believe an image has been used improperly or wish to report an issue, please contact us.
           </Typography>
         </Box>
 
