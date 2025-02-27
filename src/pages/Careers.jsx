@@ -63,28 +63,40 @@ const Careers = () => {
         <Typography variant="h4" fontWeight="bold" gutterBottom>
           Open Positions
         </Typography>
-        <Grid container spacing={3}>
+        <Grid container spacing={4}>
           {jobListings.map((job, index) => (
             <Grid item xs={12} md={6} key={index}>
               <Card
-                elevation={3}
+                elevation={4}
                 sx={{
                   borderRadius: 0,
                   border: "1px solid #ddd",
-                  padding: 2,
                   boxShadow:
-                    "0 .1875rem .4375rem 0 rgba(0,0,0,.13), 0 .0625rem .125rem  0 rgba(0,0,0,.11)",
+                    "0 .2rem .5rem rgba(0, 0, 0, 0.15), 0 .1rem .2rem rgba(0, 0, 0, 0.1)",
                   display: "flex",
                   flexDirection: "column",
                   flexGrow: 1,
-                  height: "450px",
+                  height: "460px",
                 }}
               >
-                <CardContent sx={{ flexGrow: 1, overflowY: "auto" }}>
-                  <Typography variant="h5" fontWeight="bold">
-                    {job.Title}
-                  </Typography>
+                {/* Job Title with Full-Width Background */}
+                <Box
+                  sx={{
+                    backgroundColor: "primary.main",
+                    color: "primary.contrastText",
+                    width: "100%",
+                    padding: "18px",
+                    textAlign: "center",
+                    fontSize: "1.2rem",
+                    fontWeight: "bold",
+                    boxShadow: "0 4px 6px rgba(0, 0, 0, 0.1)",
+                  }}
+                >
+                  {job.Title}
+                </Box>
 
+                {/* Card Content */}
+                <CardContent sx={{ flexGrow: 1, overflowY: "auto", p: 3 }}>
                   {job.Requirements && job.Requirements.trim() && (
                     <>
                       <Typography
@@ -93,9 +105,9 @@ const Careers = () => {
                         mt={2}
                         sx={{ display: "flex", alignItems: "center", gap: 1 }}
                       >
-                        <ListAltIcon sx={{ color: "#1976d2" }} /> Requirements
+                        <ListAltIcon sx={{ color: "primary.main" }} /> Requirements
                       </Typography>
-                      <ul>
+                      <ul style={{ paddingLeft: "20px", marginTop: "6px" }}>
                         {job.Requirements.split(";").map((requirement, i) => (
                           <li key={i}>
                             <Typography variant="body2">
@@ -115,10 +127,10 @@ const Careers = () => {
                         mt={2}
                         sx={{ display: "flex", alignItems: "center", gap: 1 }}
                       >
-                        <WorkIcon sx={{ color: "#1976d2" }} /> Roles &
+                        <WorkIcon sx={{ color: "primary.main" }} /> Roles &
                         Responsibilities
                       </Typography>
-                      <ul>
+                      <ul style={{ paddingLeft: "20px", marginTop: "6px" }}>
                         {job.Roles.split(";").map((role, i) => (
                           <li key={i}>
                             <Typography variant="body2">
@@ -138,7 +150,7 @@ const Careers = () => {
                         mt={2}
                         sx={{ display: "flex", alignItems: "center", gap: 1 }}
                       >
-                        <BuildIcon sx={{ color: "#1976d2" }} /> Skills
+                        <BuildIcon sx={{ color: "primary.main" }} /> Skills
                       </Typography>
                       <Box
                         sx={{
@@ -155,6 +167,7 @@ const Careers = () => {
                               backgroundColor: "#e0e0e0",
                               padding: "6px 12px",
                               fontSize: "14px",
+                              borderRadius: "4px",
                             }}
                           >
                             {skill.trim()}
@@ -168,7 +181,14 @@ const Careers = () => {
                   <Button
                     variant="contained"
                     color="primary"
-                    // sx={{ width: "100%" }}
+                    sx={{
+                      fontWeight: "bold",
+                      textTransform: "none",
+                      borderRadius: "4px",
+                      "&:hover": {
+                        backgroundColor: "primary.dark",
+                      },
+                    }}
                     href={`mailto:${COMPANY_EMAIL}?subject=Job Application for ${encodeURIComponent(
                       job.Title
                     )}`}
