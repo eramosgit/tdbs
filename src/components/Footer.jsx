@@ -57,7 +57,7 @@ const Footer = () => {
               onClick={() => navigate("/privacy")}
               variant="caption"
               color="inherit"
-              underline="hover"
+              underline="always" // Always underlined
               sx={{ cursor: "pointer" }}
             >
               Privacy Policy
@@ -67,7 +67,7 @@ const Footer = () => {
               onClick={() => navigate("/terms")}
               variant="caption"
               color="inherit"
-              underline="hover"
+              underline="always" // Always underlined
               sx={{ cursor: "pointer" }}
             >
               Terms of Use
