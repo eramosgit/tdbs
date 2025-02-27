@@ -83,7 +83,7 @@ const TermsOfUse = () => {
             Disclaimers and Limitation of Liability
           </Typography>
           <Typography variant="body1" paragraph>
-            This website is provided "as is" without any warranties. We do not
+            This website is provided &quot;as is&quot; without any warranties. We do not
             guarantee the accuracy, reliability, or availability of the content.
           </Typography>
           <Typography variant="body1" paragraph>
