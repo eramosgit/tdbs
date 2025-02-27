@@ -8,6 +8,7 @@ import {
   CardContent,
   Button,
 } from "@mui/material";
+import LocationOnIcon from "@mui/icons-material/LocationOn";
 import HeroSection from "../components/HeroSection";
 import careersImage from "../assets/careers.webp";
 import WorkIcon from "@mui/icons-material/Work";
@@ -69,7 +70,7 @@ const Careers = () => {
               <Card
                 elevation={4}
                 sx={{
-                  borderRadius: 0,
+                  borderRadius: "4px",
                   border: "1px solid #ddd",
                   boxShadow:
                     "0 .2rem .5rem rgba(0, 0, 0, 0.15), 0 .1rem .2rem rgba(0, 0, 0, 0.1)",
@@ -97,6 +98,22 @@ const Careers = () => {
 
                 {/* Card Content */}
                 <CardContent sx={{ flexGrow: 1, overflowY: "auto", p: 3 }}>
+                  <Typography
+                    variant="subtitle2"
+                    sx={{
+                      display: "flex",
+                      alignItems: "center",
+                      fontWeight: "bold",
+                      color: "primary.main",
+                      mb: 1.5, // Adjust spacing
+                    }}
+                  >
+                    <LocationOnIcon
+                      sx={{ fontSize: "20px", color: "primary.main", mr: 1 }}
+                    />
+                    {job.Location || "Location not specified"}
+                  </Typography>
+
                   {job.Requirements && job.Requirements.trim() && (
                     <>
                       <Typography
@@ -105,7 +122,8 @@ const Careers = () => {
                         mt={2}
                         sx={{ display: "flex", alignItems: "center", gap: 1 }}
                       >
-                        <ListAltIcon sx={{ color: "primary.main" }} /> Requirements
+                        <ListAltIcon sx={{ color: "primary.main" }} />{" "}
+                        Requirements
                       </Typography>
                       <ul style={{ paddingLeft: "20px", marginTop: "6px" }}>
                         {job.Requirements.split(";").map((requirement, i) => (
