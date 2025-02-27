@@ -40,8 +40,8 @@ const Contact = () => {
                 Address:
               </Typography>
               <Typography variant="body1">
-                Elliptical Road, Freeport Area of Bataan Compound, Brgy. Malaya
-                Mariveles, Mariveles, Philippines, 2106
+                Elliptical Road, Freeport Area of Bataan Compound, Brgy. Malaya,
+                Mariveles, Philippines, 2106
               </Typography>
               <Link
                 href="https://maps.app.goo.gl/TmG5YaZ7w344d6FFA"
