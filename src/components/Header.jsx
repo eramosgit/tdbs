@@ -84,6 +84,7 @@ const Header = () => {
                       textDecoration: "underline",
                       textUnderlineOffset: "5px",
                       textDecorationThickness: "2px",
+                      textDecorationColor: "#B8212B",
                     },
                   }}
                 >
@@ -121,6 +122,7 @@ const Header = () => {
                   textDecoration: "underline",
                   textUnderlineOffset: "5px",
                   textDecorationThickness: "2px",
+                  textDecorationColor: "#B8212B",
                 },
               }}
             >
